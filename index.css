@@ -1,0 +1,581 @@
+/* RESET GENERAL */
+
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* BARRA SUPERIOR NEGRA */
+
+.barra-negra{
+
+    background-color: black;
+
+    width: 100%;
+
+    padding: 10px 50px;
+
+}
+
+
+
+/* CONTENEDOR LINKS BARRA NEGRA */
+
+.contenedorlinks-barra{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+
+/* LINKS BARRA NEGRA */
+
+.links-barranegra{
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+
+.links-barranegra a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+
+/* REDES SOCIALES BARRA NEGRA */
+
+.redes-barranegra{
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+
+.redes-barranegra i{
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+
+/* HEADER AZUL */
+
+.barra-azul {
+
+    background-color: rgb(59, 133, 218);
+
+    min-height: 120px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 10px 20px;
+
+}
+
+
+
+/* CONTENEDOR HEADER */
+
+.contenedor-header {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* LOGO EMPRESA */
+
+.logocompania img {
+
+    width: 150px;
+
+    height: auto;
+
+    margin: 10px 0; 
+
+}
+
+
+
+/* BUSCADOR */
+
+.buscador {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 10px 0; 
+
+}
+
+
+
+/* INPUT Y BOTÓN BUSCADOR */
+
+.input-group {
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background-color: white;
+
+}
+
+
+
+.input-group .form-control {
+
+    border: none;
+
+    padding: 10px 20px;
+
+    box-shadow: none;
+
+}
+
+
+
+/* CAROUSEL */
+
+.carousel-item img {
+
+    width: 100%;
+
+    height: auto; 
+
+    max-height: 450px; 
+
+    object-fit: contain; 
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+
+/* FOOTER GENERAL */
+
+footer {
+
+    background-color: #121212;
+
+    padding: 60px 20px;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+}
+
+
+
+/* CARDS DE PRODUCTOS */
+
+.contenedor-productos {
+
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    padding: 0 20px;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+/* TITULO SECCIÓN */
+
+.titulo-seccion {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 28px;
+
+    color: #333;
+
+}
+
+
+
+/* GRILLA PRODUCTOS */
+
+.grilla-productos {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px; 
+
+}
+
+
+
+/* CARD PRODUCTO */
+
+.card-producto {
+
+    background-color: white;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* HOVER CARD PRODUCTO */
+
+.card-producto:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+
+
+/* CONTENEDOR IMAGEN PRODUCTO */
+
+.imagen-box {
+
+    background-color: #f8f9fa;
+
+    height: 220px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+/* IMAGEN PRODUCTO */
+
+.imagen-box img {
+
+    max-height: 85%;
+
+    max-width: 85%;
+
+    object-fit: contain;
+
+}
+
+
+
+/* INFO CARD PRODUCTO */
+
+.info-box {
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+
+/* TITULO PRODUCTO */
+
+.info-box h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+/* DESCRIPCIÓN PRODUCTO */
+
+.info-box p {
+
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* PRECIO PRODUCTO */
+
+.precio {
+
+    display: block;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* BOTÓN COMPRAR */
+
+.btn-comprar {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #3b85da;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+/* HOVER BOTÓN COMPRAR */
+
+.btn-comprar:hover {
+
+    background-color: #2a6bbd;
+
+}
+
+
+
+/* CONTENEDOR FOOTER */
+
+.footer-container {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: flex-start;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* INFORMACIÓN FOOTER */
+
+.footer-info h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* LISTA FOOTER */
+
+.footer-info ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+
+.footer-info li {
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    padding-left: 20px;
+
+}
+
+
+
+/* PUNTITOS LISTA */
+
+.footer-info li::before {
+
+    content: "•";
+
+    color: white;
+
+    position: absolute;
+
+    left: 0;
+
+}
+
+
+
+/* FORMULARIO CONTACTO */
+
+.contacto-basico {
+
+    width: 100%;
+
+    max-width: 350px;
+
+}
+
+
+
+/* TITULO FORMULARIO */
+
+.contacto-basico h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+
+}
+
+
+
+/* LABELS FORMULARIO */
+
+.contacto-basico label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    color: #bbb;
+
+}
+
+
+
+/* INPUTS Y TEXTAREA */
+
+.contacto-basico input, 
+
+.contacto-basico textarea {
+
+    width: 100%;
+
+    background-color: #1e1e1e;
+
+    border: 1px solid #333;
+
+    color: white;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* BOTÓN FORMULARIO */
+
+.contacto-basico button {
+
+    width: 100%;
+
+    background-color: #3b85da;
+
+    color: white;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
