@@ -1,6 +1,6 @@
 /* ==========================================================================
-1. CONFIGURACIÓN GENERAL
-   ========================================================================== */
+1. ESTILOS GENERALES Y RESET
+========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -35,6 +35,15 @@ body {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;   
+}
+
+.links-barranegra ul {
+    display: flex;       
+    gap: 20px;          
+    list-style: none;    
+    margin: 0;           
+    padding: 0;          
 }
 
 .redes-barranegra {
@@ -90,8 +99,8 @@ body {
 }
 
 /* ==========================================================================
-3. BANNER Y PRODUCTOS
-   ========================================================================== */
+3. SECCIÓN HERO / BANNER PRINCIPAL
+========================================================================== */
 .carousel-item img {
     width: 100%;
     height: auto; 
@@ -100,6 +109,9 @@ body {
     background-color: black;
 }
 
+/* ==========================================================================
+4. CATÁLOGO DE PRODUCTOS (INDEX)
+========================================================================== */
 .contenedor-productos {
     max-width: 1200px;
     margin: 60px auto;
@@ -114,9 +126,10 @@ body {
 }
 
 .grilla-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap; 
     gap: 30px; 
+    justify-content: center; 
 }
 
 .card-producto {
@@ -127,6 +140,8 @@ body {
     transition: 0.3s;
     display: flex;
     flex-direction: column;
+    flex: 1 1 280px; 
+    max-width: 350px; 
 }
 
 .card-producto:hover {
@@ -172,8 +187,8 @@ body {
 .btn-comprar:hover { background-color: #2a6bbd; }
 
 /* ==========================================================================
-4. SECCIÓN RESEÑAS (GRID)
-   ========================================================================== */
+5. SECCIÓN RESEÑAS (CSS GRID)
+========================================================================== */
 .resenas {
     max-width: 1200px;
     margin: 60px auto;
@@ -197,8 +212,8 @@ body {
 .card-resena span { font-weight: bold; display: block; text-align: right; }
 
 /* ==========================================================================
-5. FOOTER Y CONTACTO BASE
-   ========================================================================== */
+6. FOOTER Y COMPONENTES DE FORMULARIO BASE
+========================================================================== */
 footer {
     background-color: #121212;
     padding: 60px 20px;
@@ -218,6 +233,12 @@ footer {
 .footer-info ul { list-style: none; padding: 0; }
 .footer-info li { margin-bottom: 10px; position: relative; padding-left: 20px; }
 .footer-info li::before { content: "•"; position: absolute; left: 0; color: white; }
+.footer-mapa h3 {
+    font-size: 24px; 
+    font-weight: normal; 
+    margin-top: 0; 
+    margin-bottom: 20px;
+}
 
 .contacto-basico {
     width: 100%;
@@ -251,10 +272,10 @@ footer {
 }
 
 /* ==========================================================================
-6. NUEVAS CLASES PARA LAS PÁGINAS SECUNDARIAS
-   ========================================================================== */
+7. VISTAS SECUNDARIAS (SUCURSALES Y CONTACTO)
+========================================================================== */
 
-/* --- Estilos para SUCURSALES.HTML --- */
+/* --- Sucursales --- */
 .contenedor-sucursales {
     max-width: 1200px;
     margin: 60px auto;
@@ -292,7 +313,7 @@ footer {
     margin-bottom: 15px;
 }
 
-/* --- Estilos para CONTACTO.HTML --- */
+/* --- Contacto Principal --- */
 .contenedor-contacto {
     max-width: 600px;
     margin: 60px auto;
@@ -312,8 +333,143 @@ footer {
 }
 
 /* ==========================================================================
-7. DISEÑO RESPONSIVO (SIEMPRE ABAJO DE TODO)
-   ========================================================================== */
+8. COMPONENTE DEL CARRITO (CONTADOR Y SIDEBAR)
+========================================================================== */
+.carrito-header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.carrito-header a {
+    position: relative;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.carrito-header a:hover {
+    color: #121212;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carrito-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; 
+    width: 400px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.carrito-sidebar.open {
+    right: 0; 
+}
+
+.carrito-header-sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.carrito-header-sidebar h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #666;
+}
+
+.carrito-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrito h4 {
+    font-size: 14px;
+    max-width: 150px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.controles-cantidad button {
+    background-color: #eee;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.btn-eliminar-item {
+    background: none;
+    border: none;
+    color: #ff3b30;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.carrito-footer-sidebar {
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+}
+
+.total-contenedor {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* ==========================================================================
+9. MEDIA QUERIES (DISEÑO RESPONSIVO)
+========================================================================== */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
