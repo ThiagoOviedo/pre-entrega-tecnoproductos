@@ -192,25 +192,22 @@ function configurarFormulario() {
     if (!formulario) return;
     
     formulario.addEventListener('submit', (event) => {
-        const emailInput = document.getElementById('email').value.trim();
-        const nombreInput = document.getElementById('nombre').value.trim();
-        
-        // Expresión regular para validar que el formato del correo sea correcto
-        const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailInput = document.getElementById('email').value.trim();
+    const nombreInput = document.getElementById('nombre').value.trim();
+    const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (nombreInput === "") {
-            event.preventDefault(); // Detiene el envío si el nombre está vacío
-            alert("Por favor, ingresá tu nombre.");
-            return;
-        }
+    if (nombreInput === "") {
+        event.preventDefault();
+        alert("Por favor, ingresá tu nombre.");
+        return;
+    }
 
-        if (!expresionEmail.test(emailInput)) {
-            event.preventDefault(); // Detiene el envío si el email no es válido
-            alert("Por favor, ingresá un correo electrónico válido.");
-            return;
-        }
-        
-        alert("¡Muchas gracias! Tu consulta fue enviada con éxito.");
-        formulario.reset(); // Limpia los campos del formulario
-    });
+    if (!expresionEmail.test(emailInput)) {
+        event.preventDefault(); 
+        alert("Por favor, ingresá un correo electrónico válido.");
+        return;
+    }
+    
+    alert("¡Muchas gracias! Tu consulta fue enviada con éxito.");
+});
 }
